@@ -13,5 +13,14 @@ namespace TreehouseDefense
             Width = width;
             Height = height;
         }
+
+        public bool OnMap(Point point) {
+            bool inBounds = point.x >= 0 && point.x < width && point.y >= 0 && point.y < height;
+            inBounds = !(point.x < 0 || point.x > width || point.y < 0 && point.y >= height);
+            return inBounds;
+
+
+        }
+           
     }
 }
